@@ -1,0 +1,63 @@
+<!-- <table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th>nombre</th>
+      <th>especie</th>
+      <th>status</th>
+      <th>Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let character of characters">
+      <th scope="row">{{character.id}}</th>
+      <td>{{character.name}}</td>
+      <td>{{character.species}}</td>
+      <td>{{character.status}}</td>
+      <img [src]="character.image" [alt]="character.name">
+      
+    </tr>
+ 
+    
+  </tbody>
+</table> -->
+
+<!-- <div class="card" style="width: 18rem;" *ngFor=" let character of characters">
+  <img [src]="character.image" [alt]="character.name">
+  <div class="card-body">
+    <td>{{character.name}}</td>
+      <td>{{character.species}}</td>
+      <td>{{character.status}}</td>
+  </div>
+</div> -->
+
+<figure class="card card--normal" *ngFor=" let character of characters">
+  <div class="card__image-container">
+    <img [src]="character.image" [alt]="character.name">   
+  </div>
+  
+  <figcaption class="card__caption">
+    <h1 class="card__name">{{character.name}}</h1>
+
+    <h3 class="card__type">
+      {{character.gender}}
+    </h3>
+
+    <table class="card__stats" >
+      <tbody>
+      <tr>
+        <th>Especie</th>
+        <td>{{character.species}}</td>
+      </tr>
+      
+      <tr>
+        <th>Status</th>
+        <td>{{character.status}}</td>
+      </tr>
+
+     
+    </tbody></table>
+    
+  
+  </figcaption>
+</figure>

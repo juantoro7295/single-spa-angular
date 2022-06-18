@@ -1,0 +1,98 @@
+<!-- <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://e7.pngegg.com/pngimages/906/122/png-clipart-pokemon-logo-pokemon-logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      Practica
+    </a>
+  </div>
+</nav> -->
+
+<!-- <div class="container mt-2">
+  <div class="row">
+      <div class="col-md-6">
+          <table class="table table-sm table-bordered">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Informacion</th>
+                      
+                    
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let pokemon of pokemones">
+                      <td>{{pokemon.name}}</td>
+                      <td>
+                          <button class="btn btn-primary btn-sm" (click)="getInfo(pokemon.url)">Info</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-body">
+                  <p>Nombre: {{pokemon.name}}</p>
+                  <p>Experiencia: {{pokemon.base_experience}}</p>
+                  <p>Altura: {{pokemon.height}}</p>
+                  <p>Peso: {{pokemon.weight}}</p>
+                  <img *ngIf="pokemon.sprites" [src]="pokemon.sprites.back_default" alt="">
+                  <img *ngIf="pokemon.sprites" [src]="pokemon.sprites.front_default" alt="">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ -->
+
+ <figure class="card card--normal" *ngFor="let pokemon of pokemones" >
+    
+    <figcaption class="card__caption">
+      <h1 class="card__name">{{pokemon.name}}</h1>
+  
+      <h3 class="card__type">
+        <button class="btn btn-primary btn-sm" (click)="getInfo(pokemon.url)">+</button>
+        
+      </h3>
+  
+    
+    </figcaption>
+  </figure>
+
+  
+  <figure id="centrar" class="card card--normal" >
+    <div class="card__image-container">
+        <img [src]="pokemon.sprites.back_default" alt=""> 
+      </div>
+    
+    <figcaption class="card__caption">
+        <table class="card__stats" >
+            <tbody>
+            <tr>
+              <th>Nombre</th>
+              <td>{{pokemon.name}}</td>
+            </tr>
+            
+            <tr>
+              <th>Experiencia</th>
+              <td>{{pokemon.base_experience}}</td>
+            </tr>
+            <tr>
+                <th>Altura</th>
+                <td>{{pokemon.height}}</td>
+              </tr>
+              <tr>
+                <th>Peso</th>
+                <td>{{pokemon.weight}}</td>
+              </tr>
+        
+           
+          </tbody></table>
+  
+    
+    </figcaption>
+  </figure>
+
+  
+
+
